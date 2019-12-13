@@ -1,16 +1,16 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.7.3, pytest-5.3.1, py-1.8.0, pluggy-0.13.1
-rootdir: /home/Orest/labs/lab2
+rootdir: /home/Orest/test/labs/lab2
 collected 4 items
 
 tests/tests.py ....                                                      [100%]
 
-============================== 4 passed in 0.63s ===============================
+============================== 4 passed in 0.65s ===============================
 ========================================
 Результат без параметрів: 
 No URL passed to function
 ========================================
 Результат з правильною URL: 
-Time is:  08:54:26 PM
+Time is:  09:01:56 PM
 Good evening, fellas!
 Date is:  12-13-2019
