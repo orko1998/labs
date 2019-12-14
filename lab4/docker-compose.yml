@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile.site
+    image: orchivald/kk4:compose-django
+    container_name: compose-django
+    ports:
+      - 8000:8000
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.monik
+    image: orchivald/kk4:compose-monik
+    container_name: compose-monik
+    network_mode: "host"
+    volumes:
+      - monik:/app
+volumes:
+  monik:
+    driver: local
