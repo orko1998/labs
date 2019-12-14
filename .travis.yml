@@ -27,8 +27,8 @@ jobs:
         - cd ./lab4/
       script:
         - REPO="orchivald/kk4"
-        - docker build -t $REPO:django-travis .
-        - docker build -t $REPO:monik-travis .
+        - docker build -t $REPO:django-travis --file Dockerfile.site .
+        - docker build -t $REPO:monik-travis --file Dockerfile.monik .
         - docker images
         - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push $REPO:django-travis; docker push $REPO:monik-travis; else echo "PR skip deploy"; fi
     - stage: "Build Lab 5."
